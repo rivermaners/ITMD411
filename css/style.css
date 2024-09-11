@@ -1,5 +1,7 @@
 body{
     background-color: #a0aecd;
+    font-family: Roboto;
+    font-size: 18px;
 }
 
 .border{
@@ -15,30 +17,84 @@ body{
     padding-left: 10px;
 }
 
-.artistsprofile img{
+.artistsprofile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.artistsprofile > div {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    display: inline-block;
+}
+
+.artistsprofile img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    margin: 0 30px;
-    
+    margin-bottom: 10px;
+    transition: opacity 0.5s ease;
 }
 
-.artistsprofile{
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-}
-
-.artists p{
-    margin: 0 30px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.artistsprofile p {
+    margin: 0;
     font-weight: bold;
+    margin-bottom: 20px;
+    position: absolute; 
+    top: 80px; 
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+    pointer-events: none;
 }
 
-.artistsprofile img:hover{
-    transform: scale(1.1);
+.artistsprofile img:hover {
+    opacity: 0.3;
+}
+
+.artistsprofile > div:hover p {
+    opacity: 1;
+}
+
+.filmprofile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    gap: 80px; 
+    width: 100%; 
+    max-width: 1200px; 
+    overflow-x: visible; 
+    flex-wrap: wrap;
+}
+
+.filmprofile > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    flex: 0 0 auto; 
+    width: 200px; 
+    text-align: left; 
+    margin-left: 10px;
+}
+
+.filmprofile img {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+}
+
+.filmprofile p {
+    margin: 10px 0 0;
+    padding: 0;
+    font-weight: bold;
 }
